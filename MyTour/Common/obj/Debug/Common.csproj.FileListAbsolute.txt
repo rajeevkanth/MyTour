@@ -1,5 +1,0 @@
-C:\Users\rajeevmohandas\Documents\Visual Studio 2012\Projects\MyTour\Common\bin\Debug\Common.dll.config
-C:\Users\rajeevmohandas\Documents\Visual Studio 2012\Projects\MyTour\Common\bin\Debug\Common.dll
-C:\Users\rajeevmohandas\Documents\Visual Studio 2012\Projects\MyTour\Common\bin\Debug\Common.pdb
-C:\Users\rajeevmohandas\Documents\Visual Studio 2012\Projects\MyTour\Common\obj\Debug\Common.dll
-C:\Users\rajeevmohandas\Documents\Visual Studio 2012\Projects\MyTour\Common\obj\Debug\Common.pdb
