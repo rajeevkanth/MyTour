@@ -43,7 +43,7 @@ mark {
 }
 
 .float-left {
-    float: left;
+    float:left;
 }
 
 .float-right {
@@ -209,7 +209,16 @@ ul#menu {
 ----------------------------------------------------------*/
 /* featured */
 .featured {
-    background-color: #fff;
+    background-color:black;
+}
+
+.nature
+ {
+       background: url("../Images/nature.jpg") no-repeat;
+       clip:auto;
+       height:auto
+
+
 }
 
     .featured .content-wrapper {
