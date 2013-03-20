@@ -8,10 +8,8 @@ namespace Common.Domain
 {
     public class Address : DomainBase
     {
-        public Customer Customer { get; set; }
-
-        public int CustomerId { get; set; }
-
+        public int CustomerId { get; set; } 
+        
         public int CountryId { get; set; }
 
         public int SuburbId { get; set; }
@@ -27,5 +25,9 @@ namespace Common.Domain
         public virtual State State { get; set; }
 
         public virtual Country Country { get; set; }
+
+        public virtual Customer Customer { get; set; }
+
+
     }
 }

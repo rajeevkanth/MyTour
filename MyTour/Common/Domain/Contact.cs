@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    public class Contact
+    public class Contact:DomainBase
     {
         public string FirstName { get; set; }
 

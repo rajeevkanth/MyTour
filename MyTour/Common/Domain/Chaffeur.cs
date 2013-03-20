@@ -12,11 +12,9 @@ namespace Common.Domain
 
         public string LastName { get; set; }
 
-        public virtual IList<Phone> Phone { get; set; }
+        public string Phone { get; set; }
 
-        public virtual IList<Address> Address { get; set; }
-
-
+        public string Address { get; set; }
 
     }
 }

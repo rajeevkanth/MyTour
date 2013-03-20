@@ -16,7 +16,7 @@ namespace DataLayer.Configurations
 
             Property(p => p.BookingDate).IsRequired();
 
-            HasRequired(p => p.Customer).WithMany(p => p.Bookings).HasForeignKey(p => p.CustomerId).WillCascadeOnDelete();
+            HasRequired(p => p.Customer).WithMany(p => p.Bookings).HasForeignKey(p => p.CustomerId);
         }
     }
 }

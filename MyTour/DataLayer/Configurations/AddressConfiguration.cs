@@ -21,7 +21,7 @@ namespace DataLayer.Configurations
             HasRequired(p => p.Country).WithMany().HasForeignKey(p => p.CountryId);
 
             HasRequired(p => p.State).WithMany().HasForeignKey(p => p.StateId);
-
+                
             HasRequired(p => p.Suburb).WithMany().HasForeignKey(p => p.SuburbId);
         }
 

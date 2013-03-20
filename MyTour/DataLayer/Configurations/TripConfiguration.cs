@@ -20,11 +20,11 @@ namespace DataLayer.Configurations
 
             Property(p => p.SpecialInstructions).HasMaxLength(100).IsOptional();
 
-            HasOptional(p => p.Chaffeur).WithMany().HasForeignKey(p=>p.ChaffeurId);
+            HasOptional(p => p.Chaffeur).WithMany().HasForeignKey(t => t.ChaffeurId);
 
             HasOptional(p => p.Vehicle).WithMany().HasForeignKey(p => p.VehicleId);
 
-            HasRequired(p => p.PlacesCovered).WithMany().HasForeignKey(p => p.PlaceId);
+            HasRequired(p => p.Place).WithMany().HasForeignKey(p => p.PlaceId);
 
         }
 

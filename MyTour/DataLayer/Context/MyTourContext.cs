@@ -67,8 +67,15 @@ namespace DataLayer
 
         public void AddContactInfo(Contact contact)
         {
-            Contact.Add(contact);
-            SaveChanges();
+            try
+            {
+                Contact.Add(contact);
+                base.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         public void AddBooking(Booking booking)

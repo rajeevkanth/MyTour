@@ -15,12 +15,16 @@ namespace MyTour.Controllers
         public HomeController(ITourProvider provider)
         {
             _provider = provider;
+            
         }
 
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
+            var contact = new Contact {Id=1, FirstName = "Rajeev", ContactNumberOne = "406231516", ContactNumberTwo = "Nothing", Email = "rajeevkanth.m@gmail.com",LastName="M",Message="Might work" };
+            _provider.AddContactInfo(contact);
+           
             return View();
         }
 
