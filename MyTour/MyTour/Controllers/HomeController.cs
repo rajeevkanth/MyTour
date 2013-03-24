@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using ProviderLayer.Interface;
 using Common.Domain;
 using MyTour.ViewModels;
+using MyTour.Extensions;
 
 namespace MyTour.Controllers
 {
@@ -32,7 +33,7 @@ namespace MyTour.Controllers
             return View();
         }
 
-        
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -44,9 +45,12 @@ namespace MyTour.Controllers
         [HttpPost]
         public ActionResult Contact(ContactViewModel vm)
         {
-            var vmm = ViewBag.ViewModel;
-            
-            return new EmptyResult();
+            if (ModelState.IsValid)
+            {
+                _provider.AddContactInfo(vm.ToModel());
+
+            }
+            return View(vm);
         }
 
     }

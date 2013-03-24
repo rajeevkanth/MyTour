@@ -14,9 +14,11 @@ namespace DataLayer.Configurations
         {
             ToTable("Contact");
 
-            Property(p => p.LastName).IsRequired().HasMaxLength(50);
+            Property(p => p.Name).IsRequired().HasMaxLength(50);
 
-            Property(p => p.FirstName).IsOptional().HasMaxLength(50);
+            Property(p => p.Phone).IsOptional().HasMaxLength(50);
+
+            Property(p => p.Email).IsRequired();
 
             Property(p => p.Message).IsRequired().HasMaxLength(1500);
         }

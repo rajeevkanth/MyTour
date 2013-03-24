@@ -9,18 +9,16 @@ namespace MyTour.ViewModels
     public class ContactViewModel
     {
         [Required]
-        public string FirstName { get; set; }
+        [MaxLength(50)]
+        public string Name { get; set; }
 
-        public string LastName { get; set; }
-
-        public string ContactNumberOne { get; set; }
-
-        public string ContactNumberTwo { get; set; }
+        public string Phone { get; set; }
        
         [Required]
         public string Email { get; set; }
 
        [Required]
+       [MaxLength(1500)]
         public string Message { get; set; }
 
     }
