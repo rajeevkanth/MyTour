@@ -1,50 +1,93 @@
-﻿@{
+﻿@model MyTour.ViewModels.ContactViewModel
+
+@{
     ViewBag.Title = "Contact";
-}
+ }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
+  
+<script type="text/javascript">
+    $(function () { $("label").inFieldLabels(); });
+</script>
+<script type="text/javascript">
 
-<section class="contact">
-    <header>
-        <h3>Phone</h3>
-    </header>
-    <p>
-        <span class="label">Main:</span>
-        <span>425.555.0100</span>
-    </p>
-    <p>
-        <span class="label">After Hours:</span>
-        <span>425.555.0199</span>
-    </p>
-</section>
+    $(document).ready(function () {
 
-<section class="contact">
-    <header>
-        <h3>Email</h3>
-    </header>
-    <p>
-        <span class="label">Support:</span>
-        <span><a href="mailto:Support@example.com">Support@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">Marketing:</span>
-        <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
-    </p>
-    <p>
-        <span class="label">General:</span>
-        <span><a href="mailto:General@example.com">General@example.com</a></span>
-    </p>
-</section>
+    });
 
-<section class="contact">
-    <header>
-        <h3>Address</h3>
-    </header>
-    <p>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399
-    </p>
-</section>
+
+</script>
+  
+  <!-- Begin Wrapper -->
+  <div id="wrapper"> 
+    
+    <!-- Begin Content -->
+    <div class="content">
+      <h3>My Tour's Contact Information</h3>
+      <p>Please contact us for further enquiries or register your interest and we will get back to you at the earliest.</p>
+      <br />
+      <!-- Begin Form -->
+      <div class="contact-left">
+        <div id="contact-form"> 
+          
+          <!--begin:notice message block-->
+          <div id="note"></div>
+          <!--begin:notice message block-->
+          
+          <form id="ajax-contact-form" method="post">
+            <div class="labels">
+              <p>
+                <label for="name">Name</label>
+                <br />
+                <input class="required inpt" type="text" name="name" id="name" value="" />
+              </p>
+              <p>
+                <label for="email">E-Mail</label>
+                <br />
+                <input class="required inpt" type="text" name="email" id="email" value="" />
+              </p>
+                <p>
+                <label for="phone">Phone</label>
+                <br />
+                <input class="required inpt" type="text" name="phone" id="phone" value="" />
+              </p>
+            </div>
+            <div class="comments">
+              <p>
+                <textarea class="textbox" name="message" rows="6" cols="30"></textarea>
+              </p>
+              <br />
+              
+            </div>
+            <label id="load" style="display:none"></label>
+            @*<input id="submit-button"  class="button gray stripe" type="submit" name="submit" value="Send Message" />*@
+           <input id="submit-button" class="button gray stripe" type="submit" name="submit" value="Send Message"/>
+
+              
+          </form>
+        </div>
+        <!-- End Form --> 
+      </div>
+      <div class="contact-right">
+        <div class="one-half">
+          <h4>Head Office</h4>
+          <p>8/308, Handford road <br />
+            Brisbane, Qld-4030 <br />
+            <br />
+            <span class="highlight3">Tel:</span> +61 406 231 516 </p>
+        </div>
+        <div class="clear"></div>
+        <br />
+        </div>
+      <div class="clear"></div>
+      <div class="divider"></div>
+      <div id="twitter-wrapper">
+      <div class="clear"></div>
+    </div>
+    <!-- End Content --> 
+    
+  </div>
+  <!-- End Wrapper -->
+  
+  <div class="clearfix"></div>
+  <div class="push"></div>
+

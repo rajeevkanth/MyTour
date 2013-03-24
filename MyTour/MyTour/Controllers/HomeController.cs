@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ProviderLayer.Interface;
 using Common.Domain;
+using MyTour.ViewModels;
 
 namespace MyTour.Controllers
 {
@@ -28,21 +29,25 @@ namespace MyTour.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
-
             return View();
         }
 
-        public ActionResult AddContact()
-        {
-            _provider.AddContactInfo(new Contact { FirstName = "Rajeev", LastName = "M", ContactNumberOne = "0406231516", Email = "rajeevkanth.m@gmail.com", Message = "I'm Working" });
-            return new EmptyResult();
-        }
-
+        
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            var vm = new ContactViewModel();
+            ViewBag.ViewModel = vm;
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Contact(ContactViewModel vm)
+        {
+            var vmm = ViewBag.ViewModel;
+            
+            return new EmptyResult();
+        }
+
     }
 }

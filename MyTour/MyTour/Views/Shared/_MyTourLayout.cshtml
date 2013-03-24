@@ -3,8 +3,9 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>My Tour</title>
-    <link rel="stylesheet" type="text/css" href="~/Style/css/style.css" media="all" />
+    <title>@ViewBag.Title</title>
+     <link rel="stylesheet" type="text/css" href="~/Style/css/style.css" media="all"/>
+   <link rel="stylesheet" type="text/css" href="~/Style/Css/Contact/style.css" media="all"/>
     <link rel="stylesheet" media="all" href="~/Style/type/puritan.css" />
 
     
@@ -18,32 +19,7 @@
 <script type="text/javascript" src="~/Scripts/jquery.cycle.all.min.js"></script>
 <script type="text/javascript" src="~/Scripts/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="~/Scripts/scripts.js"></script>
-<script type="text/javascript">
-    $(function () {
-        if ($('#sliderholder-cycle').length) {
-            // timeouts per slide (in seconds) 
-            var timeouts = [150, 390, 25];
-            function calculateTimeout(currElement, nextElement, opts, isForward) {
-                var index = opts.currSlide;
-                return timeouts[index] * 1000;
-            }
-            jQuery('#sliderholder-cycle').cycle({
-                fx: 'fade',
-                pager: '.slidernav',
-                prev: '.sliderprev',
-                next: '.slidernext',
-                speed: 1000,
-                timeoutFn: calculateTimeout,
-                pagerEvent: 'click',
-                pauseOnPagerHover: true,
-                cleartype: 1
-            });
-            jQuery('#sliderholder-cycle').css("display", "block");
-            jQuery('.slidernav').css("display", "block");
-
-        }
-    });
-</script>
+<script type="text/javascript" src="~/Scripts/jquery.infieldlabel.min.js"></script>
 <body>
     <div id="container"> 
   <!-- Begin Header Wrapper -->
@@ -57,15 +33,23 @@
       <div id="menu-wrapper">
         <div id="smoothmenu1" class="ddsmoothmenu">
           <ul>
-            <li><a href="index.html" class="selected">Home</a>
-              <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")
+              @*<ul>
                 <li><a href="index.html">Home with Cycle</a></li>
                 <li><a href="index-2.html">Home with Columns</a></li>
                 <li><a href="index-3.html">Home with Services</a></li>
                 <li><a href="index-4.html">Home with Piecemaker</a></li>
-              </ul>
+              </ul>*@
             </li>
-            <li><a href="contact.html">Contact</a></li>
+              <li><a href="places.html">Places</a>
+                <ul>
+                <li><a href="index.html">Gold Coast</a></li>
+                <li><a href="index-2.html">Sunshine Coast</a></li>
+                <li><a href="index-3.html">Mount Tambourine</a></li>
+                <li><a href="index-4.html">Brisbane</a></li>
+              </ul>
+               </li>
+            <li><a href="contact.html">@Html.ActionLink("Contact", "Contact", "Home")</a></li>
           </ul>
         </div>
       </div>
@@ -76,65 +60,9 @@
   </div>
   <!-- End Header Wrapper --> 
   
-  <!-- Begin Slider -->
-  <div id="cycle-wrapper">
-    <div id="sliderholder-cycle"> 
-        <iframe src="http://player.vimeo.com/video/5214688?title=0&amp;byline=0&amp;portrait=0" width="960" height="480" frameborder="0"></iframe>
-
-      <div>
-                  <img src="~/Style/Images/Art/SC1.jpg" width="960" height="480" />
-              </div>
-      <img src="~/Style/Images/Art/GC1.jpg" width="960" height="480" /> 
-    </div>
-
-    <ul class="slidernav">
-    </ul>
-    <div class="sliderdir"> 
-        <a href="#"><span class="sliderprev">Prev</span></a> 
-        <a href="#"><span class="slidernext">Next</span></a> 
-
-    </div>
-  </div>
-  <!-- End Slider --> 
-   @RenderBody()
-  <!-- Begin Wrapper -->
-  <div id="wrapper"> 
-    
-    <!-- Begin Intro -->
-    <div class="intro">
-      <h1>Tours are us</h1>
-          </div>
-    <!-- End Intro --> 
-    
-    <!-- Begin About -->
-    <div id="about">
-      <div class="one-fourth"> <a href="#"><img src="~/style/images/art/home-1.jpg" alt="" /></a>
-        <h4>Tailored trips</h4>
-        <p>Everything you can see and do.</p>
-      </div>
-      <div class="one-fourth"> <a href="#"><img src="~/style/images/art/home-2.jpg" alt="" /></a>
-        <h4>Comfort</h4>
-        <p>Relax on your journey.</p>
-      </div>
-      <div class="one-fourth"> <a href="#"><img src="~/style/images/art/home-3.jpg" alt="" /></a>
-        <h4>Local Expertise</h4>
-        <p>Local expertise on the area..</p>
-      </div>
-      <div class="one-fourth last"> <a href="#"><img src="~/style/images/art/home-4.jpg" alt="" /></a>
-        <h4>Flexible</h4>
-        <p>Pick what choses you the best.</p>
-      </div>
-    </div>
-    <!-- End About -->  
-    
-  </div>
-  
-  <!-- End Wrapper -->
-  <div class="clearfix"></div>
-  <div class="push"></div>
+  <!-- Body -->
+  @RenderBody()
 </div>
-
-
-        @RenderSection("scripts", required: false)
+    @RenderSection("scripts", required: false)
 </body>
 </html>
