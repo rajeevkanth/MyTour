@@ -17,7 +17,13 @@ namespace MyTour
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+
             );
+
+            routes.MapRoute(
+                name: "Place",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Place", action = "Index", id = UrlParameter.Optional });
         }
     }
 }

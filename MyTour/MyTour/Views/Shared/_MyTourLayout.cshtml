@@ -27,7 +27,10 @@
     <div id="header-wrapper"> 
       <!-- Begin Header -->
       <div id="header">
-        <div id="logo"><a href="index.html"><img src="~/style/images/logo.png" alt="Delphic" /></a></div>
+        <div id="logo">
+            <a href="Index/Home">
+            <img src="~/style/images/Art/Tour.png" alt="MyTour"/>
+           </a></div>
         <!-- Logo --> 
         <!-- Begin Menu -->
       <div id="menu-wrapper">
@@ -41,14 +44,8 @@
                 <li><a href="index-4.html">Home with Piecemaker</a></li>
               </ul>*@
             </li>
-              <li><a href="places.html">Places</a>
-                <ul>
-                <li><a href="index.html">Gold Coast</a></li>
-                <li><a href="index-2.html">Sunshine Coast</a></li>
-                <li><a href="index-3.html">Mount Tambourine</a></li>
-                <li><a href="index-4.html">Brisbane</a></li>
-              </ul>
-               </li>
+              <li>@Html.ActionLink("Places", "Place", "Place")
+              </li>
             <li><a href="contact.html">@Html.ActionLink("Contact", "Contact", "Home")</a></li>
           </ul>
         </div>

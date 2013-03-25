@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -179,6 +180,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ContactViewModel.cs" />
+    <Compile Include="ViewModels\PlaceViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -374,6 +376,7 @@
     <Content Include="Style\Images\Art\SC1.jpg" />
     <Content Include="Style\Images\Art\Tailored.jpg" />
     <Content Include="Style\Images\Art\Tailored.png" />
+    <Content Include="Style\Images\Art\Tour.png" />
     <Content Include="Style\Images\Art\transparent.png" />
     <Content Include="Style\Images\blog-arrows.jpg" />
     <Content Include="Style\Images\bullet.jpg" />
@@ -491,6 +494,7 @@
     <Content Include="Views\Shared\_MyTourLayout.cshtml" />
     <Content Include="Style\Images\.DS_Store" />
     <Content Include="Style\Images\Art\.DS_Store" />
+    <Content Include="Views\Place\Place.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
