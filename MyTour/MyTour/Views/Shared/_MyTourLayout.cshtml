@@ -20,6 +20,43 @@
 <script type="text/javascript" src="~/Scripts/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="~/Scripts/scripts.js"></script>
 <script type="text/javascript" src="~/Scripts/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript" src="/Scripts/jquery-ui-1.8.20.js"></script>
+
+    <script type="text/javascript">
+        $(function ()
+        {
+            var $form = $(this);
+
+            $('#abt').click(function (event)
+            {
+                event.preventDefault();
+                $('#slidingSection').effect('slide', { direction: "left", mode: "hide" }, 1500,ajaxSubmit);
+                             
+            });
+
+            function ajaxSubmit()
+            {
+
+                var options = {
+                                type:"POST",
+                                url: "@Url.Action("About","Home")"
+
+                };
+
+                $.ajax(options).done(function (data)
+                {
+                    $('#slidingSection').replaceWith(data);
+
+                    //$('#slidingSection').effect('slide', { direction: "left", mode: "hide" }, 1500,callback(data));
+                })
+
+            }
+            function callback(data) {
+                $('#slidingSection').replaceWith(data);
+            }
+           
+        });
+        </script>
 <body>
     <div id="container"> 
   <!-- Begin Header Wrapper -->
@@ -36,16 +73,9 @@
       <div id="menu-wrapper">
         <div id="smoothmenu1" class="ddsmoothmenu">
           <ul>
-            <li>@Html.ActionLink("Home", "Index", "Home")
-              @*<ul>
-                <li><a href="index.html">Home with Cycle</a></li>
-                <li><a href="index-2.html">Home with Columns</a></li>
-                <li><a href="index-3.html">Home with Services</a></li>
-                <li><a href="index-4.html">Home with Piecemaker</a></li>
-              </ul>*@
-            </li>
-              <li>@Html.ActionLink("Places", "Place", "Place")
-              </li>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li id="abt">@Html.ActionLink("About us", "About", "Home")</li>
+            <li>@Html.ActionLink("Places", "Place", "Place")</li>
             <li><a href="contact.html">@Html.ActionLink("Contact", "Contact", "Home")</a></li>
           </ul>
         </div>
@@ -58,7 +88,11 @@
   <!-- End Header Wrapper --> 
   
   <!-- Body -->
+  <form method="post" action="@Url.Action("About","Home")" data-otf-ajax="true" data-otf-target="#slidingSection">
+  <div id="slidingSection" class="test">
   @RenderBody()
+  </div>
+  </form>
 </div>
     @RenderSection("scripts", required: false)
 </body>

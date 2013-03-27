@@ -1,9 +1,16 @@
 ﻿@{
     ViewBag.Title = "My Tour";
 }
-<script type="text/javascript">
-    $(function () {
-        if ($('#sliderholder-cycle').length) {
+
+<head>
+    <script >
+        </script>
+<script type="text/javascript" >
+    $(function ()
+
+    {
+        if ($('#sliderholder-cycle').length)
+        {
             // timeouts per slide (in seconds) 
             var timeouts = [150, 390, 25];
             function calculateTimeout(currElement, nextElement, opts, isForward) {
@@ -24,16 +31,22 @@
             jQuery('#sliderholder-cycle').css("display", "block");
             jQuery('.slidernav').css("display", "block");
 
+
         }
+
+        
     });
 </script>
+</head>
 
+<form data-mty-ajax="true" data-mty-target="homePage" method="get" action="@Url.Action("Index")">
+    <div id="homePage">
 <div id="cycle-wrapper">
     <div id="sliderholder-cycle"> 
-        <iframe src="http://player.vimeo.com/video/5214688?title=0&amp;byline=0&amp;portrait=0" width="960" height="480" frameborder="0"></iframe>
-
+           <img src="~/Style/Images/Art/SC1.jpg" width="960" height="480" />
       <div>
-                  <img src="~/Style/Images/Art/SC1.jpg" width="960" height="480" />
+
+          <iframe src="http://player.vimeo.com/video/5214688?title=0&amp;byline=0&amp;portrait=0" width="960" height="480" frameborder="0"></iframe>
               </div>
       <img src="~/Style/Images/Art/GC1.jpg" width="960" height="480" /> 
     </div>
@@ -83,3 +96,6 @@
   <!-- End Wrapper -->
   <div class="clearfix"></div>
   <div class="push"></div>
+  </div>
+
+</form>

@@ -12,6 +12,11 @@
 	color: #818b91;
 	font-size: 12px;
 }
+.test {
+    border:groove;
+    border-color:white;
+    border-width:thick;
+}
 
 #contact-form textarea {
 	display: block;
