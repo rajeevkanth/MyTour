@@ -12,8 +12,12 @@ namespace MyTour.Controllers
         //
         // GET: /Place/
 
-        public ActionResult Place()
+        public ActionResult Index()
         {
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("PartialPlace");
+            }
             return View();
         }
 

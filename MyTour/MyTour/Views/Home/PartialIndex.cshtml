@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "My Tour";
+}
+ <script >
+        </script>
+<script type="text/javascript" >
+    $(function ()
+
+    {
+        if ($('#sliderholder-cycle').length)
+        {
+            // timeouts per slide (in seconds) 
+            var timeouts = [150, 390, 25];
+            function calculateTimeout(currElement, nextElement, opts, isForward) {
+                var index = opts.currSlide;
+                return timeouts[index] * 1000;
+            }
+            jQuery('#sliderholder-cycle').cycle({
+                fx: 'fade',
+                pager: '.slidernav',
+                prev: '.sliderprev',
+                next: '.slidernext',
+                speed: 1000,
+                timeoutFn: calculateTimeout,
+                pagerEvent: 'click',
+                pauseOnPagerHover: true,
+                cleartype: 1
+            });
+            jQuery('#sliderholder-cycle').css("display", "block");
+            jQuery('.slidernav').css("display", "block");
+
+
+        }
+
+        
+    });
+</script>
+
+<div id="slidingSection">
+ <div id="homePage">
+<div id="cycle-wrapper">
+    <div id="sliderholder-cycle"> 
+           <img src="~/Style/Images/Art/SC1.jpg" width="960" height="480" />
+      <div>
+
+          <iframe src="http://player.vimeo.com/video/5214688?title=0&amp;byline=0&amp;portrait=0" width="960" height="480" frameborder="0"></iframe>
+              </div>
+      <img src="~/Style/Images/Art/GC1.jpg" width="960" height="480" /> 
+    </div>
+
+    <ul class="slidernav">
+    </ul>
+    <div class="sliderdir"> 
+        <a href="#"><span class="sliderprev">Prev</span></a> 
+        <a href="#"><span class="slidernext">Next</span></a> 
+
+    </div>
+  </div>
+  <!-- End Slider --> 
+   
+  <!-- Begin Wrapper -->
+  <div id="slidingSection">
+  <div id="wrapper"> 
+    
+    <!-- Begin Intro -->
+    <div class="intro">
+      <h1>Tours are us</h1>
+          </div>
+    <!-- End Intro --> 
+    
+    <!-- Begin About -->
+    <div id="about">
+      <div class="one-fourth"> <a href="#"><img src="~/style/images/art/Tailored.png" alt="" /></a>
+        <h4>Tailored trips</h4>
+        <p>Everything you can see and do.</p>
+      </div>
+      <div class="one-fourth"> <a href="#"><img src="~/style/images/art/Comfort.png" alt="" /></a>
+        <h4>Comfort</h4>
+        <p>Relax on your journey.</p>
+      </div>
+      <div class="one-fourth"> <a href="#"><img src="~/style/images/art/Expertise.png" alt="" /></a>
+        <h4>Local Expertise</h4>
+        <p>Local expertise on the area..</p>
+      </div>
+      <div class="one-fourth last"> <a href="#"><img src="~/style/images/art/Flexible.png" alt="" /></a>
+        <h4>Flexible</h4>
+        <p>Pick what choses you the best.</p>
+      </div>
+    </div>
+    <!-- End About -->  
+    
+  </div>
+  
+  <!-- End Wrapper -->
+  <div class="clearfix"></div>
+  <div class="push"></div>
+  </div>
+  </div>
+ </div>

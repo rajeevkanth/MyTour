@@ -8,11 +8,6 @@
    <link rel="stylesheet" type="text/css" href="~/Style/Css/Contact/style.css" media="all"/>
     <link rel="stylesheet" media="all" href="~/Style/type/puritan.css" />
 
-    
-@*        @Styles.Render("~/style/css")*@
-@*        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/jqueryui")
-        @Scripts.Render("~/bundles/modernizr")*@
 </head>
 
 <script type="text/javascript" src="~/Scripts/jquery-1.5.min.js"></script>
@@ -25,38 +20,51 @@
     <script type="text/javascript">
         $(function ()
         {
-            var $form = $(this);
+            
 
-            $('#abt').click(function (event)
-            {
+            $('#Home').click(function (event) {
                 event.preventDefault();
-                $('#slidingSection').effect('slide', { direction: "left", mode: "hide" }, 1500,ajaxSubmit);
-                             
+                navigate("/Home/Index");
             });
 
-            function ajaxSubmit()
+            $('#About').click(function (event) {
+                event.preventDefault();
+                navigate("/Home/About");
+            });
+
+            $('#Contact').click(function (event) {
+                event.preventDefault();
+                navigate("/Home/Contact");
+            });
+
+            $('#Place').click(function (event) {
+                event.preventDefault();
+                navigate("/Place/Index");
+            });
+
+
+
+            function navigate(uri)
             {
+            var options = {
+                          url: uri
+                          };
 
-                var options = {
-                                type:"POST",
-                                url: "@Url.Action("About","Home")"
-
-                };
-
-                $.ajax(options).done(function (data)
-                {
-                    $('#slidingSection').replaceWith(data);
-
-                    //$('#slidingSection').effect('slide', { direction: "left", mode: "hide" }, 1500,callback(data));
+            $.ajax(options).done(function (data) {
+                    $('#slidingSection').effect('slide', { direction: "left", mode: "hide" }, 500,
+                        function ()
+                        {
+                            $('#slidingSection').replaceWith(data);
+                            $('#slidingSection').hide();
+                            $('#slidingSection').fadeIn(1500);
+                             });
                 })
+             
+            };
 
-            }
-            function callback(data) {
-                $('#slidingSection').replaceWith(data);
-            }
-           
         });
-        </script>
+</script>
+
 <body>
     <div id="container"> 
   <!-- Begin Header Wrapper -->
@@ -65,7 +73,7 @@
       <!-- Begin Header -->
       <div id="header">
         <div id="logo">
-            <a href="Index/Home">
+            <a href="/Index/Home">
             <img src="~/style/images/Art/Tour.png" alt="MyTour"/>
            </a></div>
         <!-- Logo --> 
@@ -73,10 +81,10 @@
       <div id="menu-wrapper">
         <div id="smoothmenu1" class="ddsmoothmenu">
           <ul>
-            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-            <li id="abt">@Html.ActionLink("About us", "About", "Home")</li>
-            <li>@Html.ActionLink("Places", "Place", "Place")</li>
-            <li><a href="contact.html">@Html.ActionLink("Contact", "Contact", "Home")</a></li>
+            <li id="Home">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li id="About">@Html.ActionLink("About us", "About", "Home")</li>
+            <li id="Place">@Html.ActionLink("Places", "Place", "Place")</li>
+            <li id="Contact">@Html.ActionLink("Contact", "Contact", "Home")</li>
           </ul>
         </div>
       </div>
@@ -88,11 +96,10 @@
   <!-- End Header Wrapper --> 
   
   <!-- Body -->
-  <form method="post" action="@Url.Action("About","Home")" data-otf-ajax="true" data-otf-target="#slidingSection">
-  <div id="slidingSection" class="test">
+  <div id="slidingSection">
   @RenderBody()
   </div>
-  </form>
+  
 </div>
     @RenderSection("scripts", required: false)
 </body>

@@ -22,14 +22,19 @@ namespace MyTour.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("PartialIndex");
+            }
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your app description page.";
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("PartialAbout");
+            }
             return View();
         }
 
@@ -39,6 +44,10 @@ namespace MyTour.Controllers
             ViewBag.Message = "Your contact page.";
             var vm = new ContactViewModel();
             ViewBag.ViewModel = vm;
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("PartialContact");
+            }
             return View();
         }
 

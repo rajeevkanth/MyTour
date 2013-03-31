@@ -168,7 +168,6 @@
     <Compile Include="BootStrapper\BootStrapper.cs" />
     <Compile Include="ControllerRegistry\ControllerRegistry.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
@@ -496,6 +495,10 @@
     <Content Include="Style\Images\.DS_Store" />
     <Content Include="Style\Images\Art\.DS_Store" />
     <Content Include="Views\Place\Place.cshtml" />
+    <Content Include="Views\Home\PartialIndex.cshtml" />
+    <Content Include="Views\Home\PartialContact.cshtml" />
+    <Content Include="Views\Home\PartialAbout.cshtml" />
+    <Content Include="Views\Place\PartialPlace.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
