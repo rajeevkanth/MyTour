@@ -20,8 +20,7 @@
     <script type="text/javascript">
         $(function ()
         {
-            
-
+         
             $('#Home').click(function (event) {
                 event.preventDefault();
                 navigate("/Home/Index");
@@ -40,6 +39,11 @@
             $('#Place').click(function (event) {
                 event.preventDefault();
                 navigate("/Place/Index");
+            });
+
+            $('#Bookings').click(function (event) {
+                event.preventDefault();
+                navigate("/Booking/Index");
             });
 
 
@@ -84,6 +88,7 @@
             <li id="Home">@Html.ActionLink("Home", "Index", "Home")</li>
             <li id="About">@Html.ActionLink("About us", "About", "Home")</li>
             <li id="Place">@Html.ActionLink("Places", "Place", "Place")</li>
+            <li id="Bookings">@Html.ActionLink("Bookings", "Booking", "Index")</li>
             <li id="Contact">@Html.ActionLink("Contact", "Contact", "Home")</li>
           </ul>
         </div>

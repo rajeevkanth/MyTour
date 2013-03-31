@@ -1,0 +1,70 @@
+﻿<div id="slidingSection">
+<script type="text/javascript">
+    $(function () {
+
+        var message = $('#msg');
+        message.hide();
+        $("#car1").delay(750).animate({
+            left: '175px'
+        }, "slow",
+        function ()
+        {
+
+            $('#car2').animate({ left: '+175px' }, "slow",
+                function () {
+
+                    $('#car3').animate({ left: '+175px' }, "slow",
+                        function () {
+
+                            $('#car4').animate({ left: '+175px' }, "slow", function () {
+
+                                $('#car5').animate({ left: '+175px' }, "slow", function () {
+
+                                    $('#car').animate({ top: '+175px' }, "slow", function () {
+                                        
+                                        
+                                        message.fadeIn(1000);
+
+                                                    });
+
+                                                });
+
+                                            });
+
+                                        });
+                                         
+                                    });
+                                     });
+
+                                });
+          
+        
+
+    
+    </script>
+
+<div id="header">
+    <hgroup class="title">
+    <h2>Opening soon.</h2>
+
+    <h4 id="msg">Get ready to set yourself free..</h4>
+
+    </hgroup>
+    <br />
+   <br />
+    
+    <div id="car" style="background:#f00;height:150px;width:150px;position:absolute;">
+   <div id="car1" style="height:150px;width:150px;position:absolute;background-image:url(style/images/art/Brisbane1.jpg);">
+        <div id="car2" style="background:#f00;height:150px;width:150px;position:absolute;">
+         <div id="car3" style="height:150px;width:150px;position:absolute;background-image:url(style/images/art/Brisbane3.jpg);">
+         <div id="car4" style="background:#f00;height:150px;width:150px;position:absolute;">
+         <div id="car5" style="height:150px;width:150px;position:absolute;background-image:url(style/images/art/GC1.jpg);">
+   
+     </div>
+     </div>
+   
+     </div>
+     </div>
+
+</div>
+</div>

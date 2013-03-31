@@ -168,6 +168,7 @@
     <Compile Include="BootStrapper\BootStrapper.cs" />
     <Compile Include="ControllerRegistry\ControllerRegistry.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
@@ -291,6 +292,12 @@
     <Content Include="Style\Images\Art\blog2.jpg" />
     <Content Include="Style\Images\Art\blog3.jpg" />
     <Content Include="Style\Images\Art\blog4.jpg" />
+    <Content Include="Style\Images\Art\Brisbane1.jpg" />
+    <Content Include="Style\Images\Art\Brisbane2.png" />
+    <Content Include="Style\Images\Art\Brisbane3.jpg" />
+    <Content Include="Style\Images\Art\Brisbane4.png" />
+    <Content Include="Style\Images\Art\Brisbane5.png" />
+    <Content Include="Style\Images\Art\car.jpg" />
     <Content Include="Style\Images\Art\carousel-1.jpg" />
     <Content Include="Style\Images\Art\carousel-10.jpg" />
     <Content Include="Style\Images\Art\carousel-11.jpg" />
@@ -328,6 +335,10 @@
     <Content Include="Style\Images\Art\g9.jpg" />
     <Content Include="Style\Images\Art\Gbr1.jpg" />
     <Content Include="Style\Images\Art\GC1.jpg" />
+    <Content Include="Style\Images\Art\GC2.jpg" />
+    <Content Include="Style\Images\Art\GC3.jpg" />
+    <Content Include="Style\Images\Art\GC4.jpg" />
+    <Content Include="Style\Images\Art\GC5.jpg" />
     <Content Include="Style\Images\Art\home-1.jpg" />
     <Content Include="Style\Images\Art\home-2.jpg" />
     <Content Include="Style\Images\Art\home-3.jpg" />
@@ -374,8 +385,14 @@
     <Content Include="Style\Images\Art\slider-3.jpg" />
     <Content Include="Style\Images\Art\slider-4.jpg" />
     <Content Include="Style\Images\Art\SC1.jpg" />
+    <Content Include="Style\Images\Art\SSC1.png" />
+    <Content Include="Style\Images\Art\SSC2.jpg" />
+    <Content Include="Style\Images\Art\SSC3.jpg" />
     <Content Include="Style\Images\Art\Tailored.jpg" />
     <Content Include="Style\Images\Art\Tailored.png" />
+    <Content Include="Style\Images\Art\TBR1.jpg" />
+    <Content Include="Style\Images\Art\TBR2.png" />
+    <Content Include="Style\Images\Art\TBR3.jpg" />
     <Content Include="Style\Images\Art\Tour.png" />
     <Content Include="Style\Images\Art\transparent.png" />
     <Content Include="Style\Images\blog-arrows.jpg" />
@@ -499,6 +516,8 @@
     <Content Include="Views\Home\PartialContact.cshtml" />
     <Content Include="Views\Home\PartialAbout.cshtml" />
     <Content Include="Views\Place\PartialPlace.cshtml" />
+    <Content Include="Views\Booking\Booking.cshtml" />
+    <Content Include="Views\Booking\PartialBooking.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
