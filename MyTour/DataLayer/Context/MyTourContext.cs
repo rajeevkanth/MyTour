@@ -11,7 +11,8 @@ namespace DataLayer
 {
     public class MyTourContext :DbContext
     {
-        public MyTourContext():base("name=TourismContext")
+        public MyTourContext()
+            : base("name=MyTourContext")
         {
             
         }
@@ -65,17 +66,14 @@ namespace DataLayer
             return Place.Select(p => p).ToList();
         }
 
-        public void AddContactInfo(Contact contact)
+        public bool AddContactInfo(Contact contact)
         {
-            try
-            {
+            
                 Contact.Add(contact);
+                MailManager.MailManager.NewExpressionOfInterest(contact);
                 base.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-
-            }
+                return true;
+            
         }
 
         public void AddBooking(Booking booking)

@@ -518,6 +518,7 @@
     <Content Include="Views\Place\PartialPlace.cshtml" />
     <Content Include="Views\Booking\Booking.cshtml" />
     <Content Include="Views\Booking\PartialBooking.cshtml" />
+    <Content Include="Views\Home\PartialRegistrationConfirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -555,9 +556,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>3026</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:23494/</IISUrl>
+          <IISUrl>http://localhost:3026/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

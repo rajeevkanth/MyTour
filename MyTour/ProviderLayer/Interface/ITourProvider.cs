@@ -13,7 +13,7 @@ namespace ProviderLayer.Interface
 
         void AddBooking(Booking booking);
 
-        void AddContactInfo(Contact contact);
+        bool AddContactInfo(Contact contact);
 
     }
 }

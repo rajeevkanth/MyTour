@@ -54,6 +54,7 @@
     <Compile Include="Configurations\TripConfiguration.cs" />
     <Compile Include="Context\MyTourContext.cs" />
     <Compile Include="Initializer\TourContextIntializer.cs" />
+    <Compile Include="MailManager\MailManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

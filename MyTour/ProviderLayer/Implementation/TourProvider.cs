@@ -27,9 +27,9 @@ namespace ProviderLayer.Implementation
             _context.AddBooking(booking);
         }
 
-        public void AddContactInfo(Common.Domain.Contact contact)
+        public bool AddContactInfo(Common.Domain.Contact contact)
         {
-            _context.AddContactInfo(contact);
+            return _context.AddContactInfo(contact);
         }
     }
 }

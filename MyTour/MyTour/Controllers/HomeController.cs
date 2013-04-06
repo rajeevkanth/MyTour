@@ -57,9 +57,13 @@ namespace MyTour.Controllers
             if (ModelState.IsValid)
             {
                 _provider.AddContactInfo(vm.ToModel());
+                if(Request.IsAjaxRequest())
+                return PartialView("PartialRegistrationConfirmation");
 
+                return View("PartialRegistrationConfirmation");
             }
-            return View(vm);
+            return View();
+
         }
 
     }
