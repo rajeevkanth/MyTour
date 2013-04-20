@@ -1,72 +1,82 @@
-﻿<div id="slidingSection">
-<script type="text/javascript">
-    $(function () {
+﻿ <head>
+     <title>test</title>
+     <link rel="stylesheet" type="text/css" href="~/Style/css/style.css" media="all"/>
+    @* <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+     <script src="https://raw.github.com/tobia/Pause/master/jquery.pause.js"></script>
+     <script src="~/Scripts/jquery.marquee.min.js"></script>*@
+ </head>
+<script>
+    $(function() {
 
-        var message = $('#msg');
-        message.hide();
-        $("#car1").delay(750).animate({
-            left: '175px'
-        }, "slow",
-        function ()
-        {
+        $('#picture').cycle({
+            fx: 'shuffle',
+            easing: 'easeOutBack',
+            delay: -2000
+        });
+        //$('.attractions').marquee({
+        //    //speed in milliseconds of the marquee
+        //    speed: 5000,
+        //    //gap in pixels between the tickers
+        //    gap: 50,
+        //    //gap in pixels between the tickers
+        //    delayBeforeStart: 0,
+        //    //'left' or 'right'
+        //    direction: 'down',
+        //    //true or false - should the marquee be duplicated to show an effect of continues flow
+        //    duplicated: true,
+        //    //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+        //    pauseOnHover: true
+        //});
+    });
+</script>
 
-            $('#car2').animate({ left: '+175px' }, "slow",
-                function () {
-
-                    $('#car3').animate({ left: '+175px' }, "slow",
-                        function () {
-
-                            $('#car4').animate({ left: '+175px' }, "slow", function () {
-
-                                $('#car5').animate({ left: '+175px' }, "slow", function () {
-
-                                    $('#car').animate({ top: '+75px' }, "slow", function () {
-                                        message.fadeIn(1000);
-                                                    });
-
-                                                });
-
-                                            });
-
-                                        });
-                                         
-                                    });
-                                     });
-
-                                });
-          
-        
-
-    
-    </script>
-
+<div id="slidingSection">
 <div id="header">
     <hgroup class="title">
-    <h2>Bookings Opening Soon.</h2>
-
-    <h4 id="msg">Get ready to set yourself free..</h4>
-
-    </hgroup>
+     <h4>Bookings Open Now.</h4>
+     </hgroup>
     <br />
-   <br />
+    <br />
+        <div class="bookingballoon">
+            <div id="holder">
+                <div id="picture">
+                <img width="150" height="160"  src="~/style/images/art/Brisbane1.jpg"  alt=""/>
+                 <img width="150" height="160"  src="~/style/images/art/Brisbane2.png"  alt=""/>
+                 <img width="150" height="160" src="~/style/images/art/Brisbane3.jpg"  alt=""/>
+                 <img width="150" height="160" src="~/style/images/art/Brisbane4.png"  alt=""/>
+                  <img width="150" height="160" src="~/style/images/art/Brisbane5.png"  alt=""/>
+ 
+                </div>         
+                <div id="description">
+                    <h4>Brisbane Bitch</h4> 
+                    <article>
+                        <p>
+                            Brisbane is a city for the senses;
+                            Walking under impossibly blue skies around this foot-friendly city opens up a world of experiences.
+                            A well planned series of paths and bridges connect the city centre to South Bank, 
+                            as well as many of our urban villages that tease the river’s edge as it bends the city, its parks and gentle skyscrapers.
+                        </p>
+            
+                    </article>
+                </div>
 
-     <div id="car" style="background:#f00;height:150px;width:150px;position:absolute;">
-     <div id="car1" style="height:150px;width:150px;position:absolute;background-image:url(style/images/art/Brisbane1.jpg);">
-     <div id="car2" style="background:#f00;height:150px;width:150px;position:absolute;">
+                <div id="attractions">
+                    <ul>
+                        <li>Kangaroo point</li>
+                        <li>South bank parklands</li>
+                        <li>Lone pine kola sanctuary</li>
+                        <li>Casino</li>
+                    </ul>
+                </div>
+                
+@*                <div id="buttonSection">
+                    <button id="More" name="More details" type="button" />
+                </div>*@
 
-     <div id="car3" style="height:150px;width:150px;position:absolute;background-image:url(style/images/art/Brisbane3.jpg);">
-     <div id="car4" style="background:#f00;height:150px;width:150px;position:absolute;">
-     <div id="car5" style="height:150px;width:150px;position:absolute;background-image:url(style/images/art/GC1.jpg);">
-      
-     </div>
-     </div>
-   
-     </div>
-     </div>
+            </div>
+  
+    </div>
 
-</div>
-</div>
-
+      </div>
     </div>
     
-   

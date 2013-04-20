@@ -10,13 +10,12 @@
 
 </head>
 
-<script type="text/javascript" src="~/Scripts/jquery-1.5.min.js"></script>
-<script type="text/javascript" src="~/Scripts/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/Scripts/jquery-ui-1.8.20.min.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery.cycle.all.js"></script>
 <script type="text/javascript" src="~/Scripts/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="~/Scripts/scripts.js"></script>
 <script type="text/javascript" src="~/Scripts/jquery.infieldlabel.min.js"></script>
-<script type="text/javascript" src="/Scripts/jquery-ui-1.8.20.js"></script>
-
 
     <script type="text/javascript">
         $(function ()
@@ -55,20 +54,22 @@
                           url: uri
                           };
 
-            $.ajax(options).done(function (data) {
-                    $('#slidingSection').effect('slide', { direction: "left", mode: "hide" }, 500,
+            $.ajax(options).done(function (data)
+            {
+                $('#slidingSection').effect('shuffle', { mode: "hide" }, 500,
                         function ()
                         {
+                            
                             $('#slidingSection').replaceWith(data);
                             $('#slidingSection').hide();
                             $('#slidingSection').fadeIn(1500);
-                             });
-                })
-             
+                        });
+                });
+
             };
 
         });
-</script>
+        </script>
 
 <body>
     <div id="container"> 
@@ -81,16 +82,22 @@
             <a href="/Index/Home">
             <img src="~/style/images/Art/Tour.png" alt="MyTour"/>
            </a></div>
-        <!-- Logo --> 
+        @*<!-- Logo -->*@ 
         <!-- Begin Menu -->
       <div id="menu-wrapper">
         <div id="smoothmenu1" class="ddsmoothmenu">
           <ul>
             <li id="Home">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li id="Admin">@Html.ActionLink("Admin", "Index", "Admin")</li>
             <li id="About">@Html.ActionLink("About us", "About", "Home")</li>
             <li id="Place">@Html.ActionLink("Places", "Place", "Place")</li>
             <li id="Bookings">@Html.ActionLink("Bookings", "Booking", "Index")</li>
-            <li id="Contact">@Html.ActionLink("Contact", "Contact", "Home")</li>
+              <li id="Contact">@Html.ActionLink("Contact", "Contact", "Home")</li>
+              @if (Request.IsAuthenticated)
+              {
+                  <li>@Html.ActionLink("LogOff", "LogOff", "Account")</li>
+              }
+
           </ul>
         </div>
       </div>
@@ -107,6 +114,9 @@
   </div>
   
 </div>
-    @RenderSection("scripts", required: false)
+  @RenderSection("scripts", required: false) 
 </body>
-</html>
+ 
+
+</html > 
+    

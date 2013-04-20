@@ -24,7 +24,7 @@ Description: HTML Portfolio & Blog
 16.	CONTACT
 17.	TOGGLE & TABS
 18.	CAROUSEL
-
+19.BOOKING BALOON
 -----------------------------------------------------------------------------------*/
 
 
@@ -219,7 +219,7 @@ h6 {
 }
 
 .divider, .divider2, .divider3 {
-	background: transparent url(style/images/line.png) repeat-x bottom center;
+	background: transparent url(~/style/images/line.png) repeat-x bottom center;
 	height: 2px;
 	display: block;
 	margin: 30px 0;
@@ -1065,7 +1065,7 @@ ul#tab-menu {
 }
 
 ul#tab-menu li {
-	background: transparent url(style/images/line.png) bottom repeat-x;
+	background: transparent url(~/style/images/line.png) bottom repeat-x;
 	cursor: pointer;
 	padding: 20px 10px;
 	margin: 0;
@@ -2103,3 +2103,120 @@ h2.trigger:hover {
 .d-carousel .jcarousel-prev-horizontal:hover {
 	background-position: bottom left;
 }
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	19.	Booking Baloon
+/*-----------------------------------------------------------------------------------*/
+
+
+.bookingballoon #holder
+{
+    height:150px;
+    width:100%;
+    padding: 10px;
+    position: absolute;
+    border: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 10px;
+    display: table;
+}
+
+.bookingballoon #divider {
+    background: transparent;
+    background-image: url("~/style/images/line.png");
+	height: 2px;
+	display: block;
+	margin: 30px 0;
+    float:right
+}
+
+
+.bookingballoon #picture {
+    top: 0px;
+	float:left;
+	display: block;
+	margin:0;
+	padding:0;
+	margin-right:20px;
+    width: 150px;
+    height: 150px;
+    display: table-cell;
+    
+}
+.bookingballoon #description {
+    top: 0px;
+	float:none;
+	display: block;
+	margin:0;
+	padding:0;
+	margin-right:20px;
+    width: 60%;
+    height: 150px;
+    display: table-cell;
+    vertical-align: top;
+
+}
+.bookingballoon #attractions {
+   top: 20px;
+	float:right;
+	display: block;
+	margin:0;
+	padding:0;
+	margin-right:20px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    
+}
+
+.bookingballoon #buttonSection 
+{
+    display: table-row;
+    vertical-align: bottom;
+}
+
+.bookingballoon #verticalSeparator {
+    background-image: url("~/style/images/line-v.png");
+    height: 150px;
+    width: 1px;
+    float: right;
+	display: block;
+    margin:0;
+	padding:10px;
+    margin-top: -10%;
+    margin-right: 20%;
+    position: relative;     
+}
+
+
+.bookingballoon li {
+    
+	padding:5px;
+	
+}
+.bookingballoon article {
+
+    width: 75%;
+	
+}
+
+.bookingballoon h4 {
+    width: 50%;
+    position: relative
+}
+.line-separator
+{
+height:100px;
+background:#717171;
+border-bottom:1px solid #313030;
+margin-top: 0%;
+
+}
+
+
+/**/

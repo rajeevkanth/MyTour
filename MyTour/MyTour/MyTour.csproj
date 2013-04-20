@@ -168,15 +168,14 @@
     <Compile Include="BootStrapper\BootStrapper.cs" />
     <Compile Include="ControllerRegistry\ControllerRegistry.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlaceController.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
-    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ContactViewModel.cs" />
@@ -250,6 +249,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.cycle.all.js" />
     <Content Include="Scripts\jquery.cycle.all.min.js" />
     <Content Include="Scripts\jquery.infieldlabel.min.js" />
     <Content Include="Scripts\jquery.jcarousel.js" />
@@ -519,9 +519,14 @@
     <Content Include="Views\Booking\Booking.cshtml" />
     <Content Include="Views\Booking\PartialBooking.cshtml" />
     <Content Include="Views\Home\PartialRegistrationConfirmation.cshtml" />
+    <Content Include="Views\Admin\Admin.cshtml" />
+    <Content Include="Views\Admin\PartialAdmin.cshtml" />
+    <Content Include="Views\Account\PartialLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

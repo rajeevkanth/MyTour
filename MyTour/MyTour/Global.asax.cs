@@ -26,6 +26,7 @@ namespace MyTour
 
         private void  InitialiseDataBase()
         {
+            WebMatrix.WebData.WebSecurity.InitializeDatabaseConnection("MyTourContext", "UserProfile", "UserId", "UserName", autoCreateTables: true);
             Database.SetInitializer(new TourContextIntializer());
         }
 

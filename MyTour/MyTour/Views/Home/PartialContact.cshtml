@@ -21,12 +21,11 @@
 
             var result = data.get_response().get_object();
 
-            $('#slidingSection').fadeOut("slow", function ()
-                            {
-                                $('#slidingSection').replaceWith(result);
-                                $('#slidingSection').hide();
-                                $('#slidingSection').fadeIn(1500);
-                            })
+            $('#slidingSection').fadeOut("slow", function() {
+                $('#slidingSection').replaceWith(result);
+                $('#slidingSection').hide();
+                $('#slidingSection').fadeIn(1500);
+            });
         }
     //    $('#submit-button').click(function (event)
     //    {
@@ -65,7 +64,7 @@
       <!-- Begin Form -->   
         <div class="contact-left">
         <div id="contact-form"> 
-        <div id="note"></div>
+        
 
           @using (@Ajax.BeginForm(new AjaxOptions 
                                     {
@@ -138,3 +137,4 @@
   <div class="clearfix"></div>
   <div class="push"></div>
   </div>
+    </div>

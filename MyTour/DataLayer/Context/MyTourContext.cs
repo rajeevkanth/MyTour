@@ -44,6 +44,8 @@ namespace DataLayer
 
         public DbSet<Contact> Contact { get; set; }
 
+        public DbSet<UserProfile> UserProfiles { get; set; }
+
         #endregion
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

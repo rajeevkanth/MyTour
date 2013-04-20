@@ -22,12 +22,12 @@ namespace DataLayer.MailManager
                 mail.Subject = "Expression of interest";
                 mail.Body = FormatMessage(contact);
                 mail.IsBodyHtml = false;
-                mail.From = new MailAddress("rajeevkanth1982@gmail.com");
+                mail.From = new MailAddress("rajeevkanth.m@gmail.com");
                 mail.To.Add("rajeevkanth.m@gmail.com");
 
                 SmtpClient SmtpServer = new SmtpClient();
                 SmtpServer.UseDefaultCredentials = false;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("rajeevkanth1982@gmail.com", "RA11**sh");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("rajeevkanth.m@gmail.com", "Apster123");
                 SmtpServer.DeliveryMethod = SmtpDeliveryMethod.Network;
                 SmtpServer.Host = "smtp.gmail.com";
                 SmtpServer.Port = 587;

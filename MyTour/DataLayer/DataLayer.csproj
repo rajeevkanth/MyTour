@@ -55,6 +55,11 @@
     <Compile Include="Context\MyTourContext.cs" />
     <Compile Include="Initializer\TourContextIntializer.cs" />
     <Compile Include="MailManager\MailManager.cs" />
+    <Compile Include="Migrations\201304060826225_InitialCreate.cs" />
+    <Compile Include="Migrations\201304060826225_InitialCreate.Designer.cs">
+      <DependentUpon>201304060826225_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,7 +72,11 @@
       <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201304060826225_InitialCreate.resx">
+      <DependentUpon>201304060826225_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
