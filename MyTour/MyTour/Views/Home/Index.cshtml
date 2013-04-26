@@ -2,6 +2,15 @@
     ViewBag.Title = "My Tour";
 }
 
+<script type="text/javascript">
+    $(function() {
+
+        $("#about").click(function() {
+            alert("about");
+        });
+
+    })
+</script>
 
 <div class="metrouicss">
 <div class="page secondary fixed-header">
@@ -26,7 +35,7 @@
     <div class="page-region">
         <div class="page-region-content tiles">
             <div class="tile-group tile-drag">
-                <div class="tile image">
+                <div class="tile image" id="about">
                     <div class="tile-content">
                         <img src="/images/about-us.jpg" alt="">
                     </div>
@@ -145,7 +154,7 @@
                         </div>
                     </div>*@
 
-                <div class="tile double bg-color-green" data-role="tile-slider" data-param-period="3000" data-param-direction="right">
+                <div class="tile double  bg-color-green" data-role="tile-slider" data-param-period="3000" data-param-direction="right">
                     <div class="tile-content">
                         <h2>Ekka</h2>
                         <h5>Ekka festival Brisbane.</h5>
