@@ -2,75 +2,22 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-     <link rel="stylesheet" type="text/css" href="~/Style/css/style.css" media="all"/>
-   <link rel="stylesheet" type="text/css" href="~/Style/Css/Contact/style.css" media="all"/>
-    <link rel="stylesheet" media="all" href="~/Style/type/puritan.css" />
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="My Tours">
+    <meta name="author" content="RajeevKanth Mohandas">
+    <meta name="keywords" content="Brisbane, tours, chaffeur, trip, comfort">
+   <link href="/css/modern.css" rel="stylesheet">
+    <link href="/css/theme-dark.css" rel="stylesheet">
+    <link href="/css/modern-responsive.css" rel="stylesheet">
 </head>
-
-<script type="text/javascript" src="/Scripts/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="/Scripts/jquery-ui-1.8.20.min.js"></script>
-<script type="text/javascript" src="~/Scripts/jquery.cycle.all.js"></script>
-<script type="text/javascript" src="~/Scripts/ddsmoothmenu.js"></script>
-<script type="text/javascript" src="~/Scripts/scripts.js"></script>
-<script type="text/javascript" src="~/Scripts/jquery.infieldlabel.min.js"></script>
-<script type="text/javascript" src="~/Scripts/jquery.marquee.min.js"></script>
-
-    <script type="text/javascript">
-        $(function ()
-        {
-         
-            $('#Home').click(function (event) {
-                event.preventDefault();
-                navigate("/Home/Index");
-            });
-
-            $('#About').click(function (event) {
-                event.preventDefault();
-                navigate("/Home/About");
-            });
-
-            $('#Contact').click(function (event) {
-                event.preventDefault();
-                navigate("/Home/Contact");
-            });
-
-            $('#Place').click(function (event) {
-                event.preventDefault();
-                navigate("/Place/Index");
-            });
-
-            $('#Bookings').click(function (event) {
-                event.preventDefault();
-                navigate("/Booking/Index");
-            });
-
-
-
-            function navigate(uri)
-            {
-            var options = {
-                          url: uri
-                          };
-
-            $.ajax(options).done(function (data)
-            {
-                $('#slidingSection').effect('shuffle', { mode: "hide" }, 500,
-                        function ()
-                        {
-                            
-                            $('#slidingSection').replaceWith(data);
-                            $('#slidingSection').hide();
-                            $('#slidingSection').fadeIn(1500);
-                        });
-                });
-
-            };
-
-        });
-        </script>
+    <script src="/js/assets/jquery-1.8.2.min.js"></script>
+    <script src="/js/assets/google-analytics.js"></script>
+    <script src="/js/assets/jquery.mousewheel.min.js"></script>
+    <script src="/js/assets/github.info.js"></script>
+    <script src="/js/modern/tile-slider.js"></script>
+    <script src="/js/modern/start-menu.js"></script>
+    <script src="/js/modern/tile-drag.js"></script>
 
 <body>
     <div id="container"> 
@@ -79,13 +26,13 @@
     <div id="header-wrapper"> 
       <!-- Begin Header -->
       <div id="header">
-        <div id="logo">
+@*        <div id="logo">
             <a href="/Index/Home">
             <img src="~/style/images/Art/Tour.png" alt="MyTour"/>
-           </a></div>
+           </a></div>*@
         @*<!-- Logo -->*@ 
         <!-- Begin Menu -->
-      <div id="menu-wrapper">
+@*      <div id="menu-wrapper">
         <div id="smoothmenu1" class="ddsmoothmenu">
           <ul>
             <li id="Home">@Html.ActionLink("Home", "Index", "Home")</li>
@@ -101,7 +48,7 @@
 
           </ul>
         </div>
-      </div>
+      </div>*@
       <!-- End Menu --> 
       </div>
       <!-- End Header --> 

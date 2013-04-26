@@ -22,10 +22,6 @@ namespace MyTour.Controllers
 
         public ActionResult Index()
         {
-            if (Request.IsAjaxRequest())
-            {
-                return PartialView("PartialIndex");
-            }
             return View();
         }
 
