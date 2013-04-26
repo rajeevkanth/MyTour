@@ -253,6 +253,8 @@
     <Content Include="Scripts\jquery.cycle.all.min.js" />
     <Content Include="Scripts\jquery.infieldlabel.min.js" />
     <Content Include="Scripts\jquery.jcarousel.js" />
+    <Content Include="Scripts\jquery.marquee.js" />
+    <Content Include="Scripts\jquery.marquee.min.js" />
     <Content Include="Scripts\jquery.prettyPhoto.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -453,7 +455,6 @@
     <Content Include="Style\Images\intro-line.png" />
     <Content Include="Style\Images\line-v.png" />
     <Content Include="Style\Images\line.png" />
-    <Content Include="Style\Images\logo.png" />
     <Content Include="Style\Images\pp-bg.png" />
     <Content Include="Style\Images\search.png" />
     <Content Include="Style\Images\slider-arrows.jpg" />

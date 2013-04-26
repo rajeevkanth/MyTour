@@ -13,38 +13,34 @@
             easing: 'easeOutBack',
             delay: -2000
         });
-        //$('.attractions').marquee({
-        //    //speed in milliseconds of the marquee
-        //    speed: 5000,
-        //    //gap in pixels between the tickers
-        //    gap: 50,
-        //    //gap in pixels between the tickers
-        //    delayBeforeStart: 0,
-        //    //'left' or 'right'
-        //    direction: 'down',
-        //    //true or false - should the marquee be duplicated to show an effect of continues flow
-        //    duplicated: true,
-        //    //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
-        //    pauseOnHover: true
-        //});
+        $('#attractions').marquee({
+            speed: 10000,
+            gap: 50,
+            delayBeforeStart: 0,
+            direction: 'left',
+            duplicated: true,
+            //on hover pause the marquee - using jQuery plugin https://github.com/tobia/Pause
+            pauseOnHover: true
+        });
     });
 </script>
 
 <div id="slidingSection">
-<div id="header">
-    <hgroup class="title">
-     <h4>Bookings Open Now.</h4>
-     </hgroup>
-    <br />
-    <br />
+    <div id="header">
+        <hgroup class="title">
+            <h4>Bookings Open Now.</h4>
+        </hgroup>
+        <br />
+    
         <div class="bookingballoon">
             <div id="holder">
+                <div class="content">e
                 <div id="picture">
-                <img width="150" height="160"  src="~/style/images/art/Brisbane1.jpg"  alt=""/>
-                 <img width="150" height="160"  src="~/style/images/art/Brisbane2.png"  alt=""/>
-                 <img width="150" height="160" src="~/style/images/art/Brisbane3.jpg"  alt=""/>
-                 <img width="150" height="160" src="~/style/images/art/Brisbane4.png"  alt=""/>
-                  <img width="150" height="160" src="~/style/images/art/Brisbane5.png"  alt=""/>
+                    <img width="150" height="160"  src="~/style/images/art/Brisbane1.jpg"  alt=""/>
+                    <img width="150" height="160"  src="~/style/images/art/Brisbane2.png"  alt=""/>
+                    <img width="150" height="160" src="~/style/images/art/Brisbane3.jpg"  alt=""/>
+                    <img width="150" height="160" src="~/style/images/art/Brisbane4.png"  alt=""/>
+                    <img width="150" height="160" src="~/style/images/art/Brisbane5.png"  alt=""/>
  
                 </div>         
                 <div id="description">
@@ -56,27 +52,33 @@
                             A well planned series of paths and bridges connect the city centre to South Bank, 
                             as well as many of our urban villages that tease the river’s edge as it bends the city, its parks and gentle skyscrapers.
                         </p>
-            
+                    <br>    
+                    <h5>Must see in Brisbane.</h5>  
+                        
+                    <div id="attractions">
+                        <p>Kangaroo point |  South bank parklands | Lone pine kola sanctuary | Casino | Pubs | City cat ferry | Australia zoo |Cultural centre</p>
+                    </div>
+                    <input id="book" type="submit" name="submit" value="Book a Trip" />                        
                     </article>
+                    </div>
                 </div>
-
-                <div id="attractions">
-                    <ul>
-                        <li>Kangaroo point</li>
-                        <li>South bank parklands</li>
-                        <li>Lone pine kola sanctuary</li>
-                        <li>Casino</li>
-                    </ul>
                 </div>
-                
-@*                <div id="buttonSection">
-                    <button id="More" name="More details" type="button" />
-                </div>*@
-
             </div>
-  
-    </div>
-
-      </div>
-    </div>
+            </div>
+            
+        <br/>
+        <br>
     
+    
+    
+        <div id="Places">
+            <select name="Places">
+                <option value="Brisbane">Brisbane</option>
+                <option value="Gold Coast">Gold Coast</option>
+                <option value="SunShine Coast">SunShine Coast</option>
+                <option value="Mt:Tambourine">Mt:Tambourine</option>
+            </select>
+        </div>
+        </div>
+    
+   

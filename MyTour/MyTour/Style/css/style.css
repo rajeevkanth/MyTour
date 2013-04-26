@@ -506,7 +506,7 @@ table.price td h2 sup {
 #header-wrapper {
 	min-width: 960px;
 	height: 88px;
-	background: transparent url(style/images/header-bg.png) repeat-x center bottom;
+	background: transparent url(~/style/images/header-bg.png) repeat-x center bottom;
 }
 
 #header {
@@ -1616,7 +1616,7 @@ ul.ads {
 	width: auto;
 	position: relative;
 	z-index: 9999;
-	background: transparent url(style/images/submit.png) no-repeat;
+	background: transparent url(~/style/images/submit.png) no-repeat;
 	color: #1f1f1f;
 	padding: 5px 12px;
 	font-size: 14px;
@@ -2112,7 +2112,7 @@ h2.trigger:hover {
 
 .bookingballoon #holder
 {
-    height:150px;
+    height:100%;
     width:100%;
     padding: 10px;
     position: absolute;
@@ -2144,34 +2144,43 @@ h2.trigger:hover {
     width: 150px;
     height: 150px;
     display: table-cell;
-    
+    vertical-align:top;
 }
 .bookingballoon #description {
-    top: 0px;
-	float:none;
-	display: block;
+    
+    float:none;
+	width: 50%;
 	margin:0;
 	padding:0;
-	margin-right:20px;
-    width: 60%;
+	margin-right:500px;
+    width: auto;
     height: 150px;
     display: table-cell;
-    vertical-align: top;
-
+    vertical-align:top;
+ 
 }
-.bookingballoon #attractions {
-   top: 20px;
-	float:right;
-	display: block;
+
+
+
+/*.bookingballoon #attractions {
+    float:right;
 	margin:0;
 	padding:0;
-	margin-right:20px;
+	margin-right:0px;
     width: 150px;
     height: 150px;
     position: relative;
-    display: table-cell;
-    vertical-align: top;
+
     
+}*/
+ #Places 
+ {
+    margin: 0 auto;
+    top: 100px;
+    position: relative;
+	z-index: 999;
+    float: none;
+    vertical-align: bottom;
 }
 
 .bookingballoon #buttonSection 
@@ -2199,15 +2208,33 @@ h2.trigger:hover {
 	padding:5px;
 	
 }
-.bookingballoon article {
-
-    width: 75%;
-	
-}
 
 .bookingballoon h4 {
     width: 50%;
     position: relative
+}
+
+.bookingballoon #attractions 
+{
+    width: 500px;
+    overflow: hidden;
+}
+.bookingballoon #Book {
+    clear:both;
+	float: right;
+	margin:0px;
+	text-align: center;
+	margin: -34px 10px 0 0;
+	width: auto;
+	position: relative;
+	z-index: 9999;
+	/*background: transparent url(~/style/images/button-gray.png) no-repeat;*/
+	color: #1f1f1f;
+	padding: 10px 12px;
+	font-size: 14px;
+	height: 32px;
+	width: 120px;
+	cursor: pointer;
 }
 .line-separator
 {
