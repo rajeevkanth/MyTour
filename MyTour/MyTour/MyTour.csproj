@@ -172,6 +172,7 @@
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlaceController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -682,6 +683,7 @@
     <Content Include="Views\Admin\Admin.cshtml" />
     <Content Include="Views\Admin\PartialAdmin.cshtml" />
     <Content Include="Views\Account\PartialLogin.cshtml" />
+    <Content Include="Views\User\User.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

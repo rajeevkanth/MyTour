@@ -1,46 +1,47 @@
 ﻿@model MyTour.Models.RegisterModel
 @{
+    Layout = "/Views/Shared/_myTourContentLayout.cshtml";
     ViewBag.Title = "Register";
 }
 
 <div id="slidingSection">
 <div id="wrapper">
     <div class="content">
-        <hgroup class="title">
-            <h1>@ViewBag.Title.</h1>
-            <h2>Create a new account.</h2>
-        </hgroup>
-
-        @using (Html.BeginForm()) {
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary()
-             <div class="login-left">
-           <div id="login-form">
-            <fieldset>
-                <legend>Registration Form</legend>
-                <ol>
-                    <li>
-                        @Html.LabelFor(m => m.UserName)
-                        @Html.TextBoxFor(m => m.UserName)
-                    </li>
-                    <li>
-                        @Html.LabelFor(m => m.Password)
-                        @Html.PasswordFor(m => m.Password)
-                    </li>
-                    <li>
-                        @Html.LabelFor(m => m.ConfirmPassword)
-                        @Html.PasswordFor(m => m.ConfirmPassword)
-                    </li>
-                </ol>
-                <input type="submit" value="Register" />
-            </fieldset>
+        <section>
+        <h2>Create an account</h2>
+        <div class="user-login">
+            <div id="login-form">
+                @using (Html.BeginForm()) {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary()
+             
+                <div class="labels">
+                  <p>
+                    @Html.LabelFor(p => p.UserName)
+                      <br/>
+                    @Html.EditorFor(p => p.UserName)
+                      @Html.ValidationMessageFor(p => p.UserName)
+                  </p>
+                    <p>
+                        @Html.LabelFor(p => p.Password)
+                        <br/>
+                        @Html.EditorFor(p => p.Password)
+                        @Html.ValidationMessageFor(p => p.Password)
+                    </p>
+                    <p>
+                    @Html.LabelFor(p => p.ConfirmPassword)
+                      <br/>
+                    @Html.EditorFor(p => p.ConfirmPassword)
+                      @Html.ValidationMessageFor(p => p.ConfirmPassword)
+                  </p>
+                  <br/>
+                  <input id="submit-button" class="button gray stripe"  type="submit" value="Register"/>
+                  </div>        
+                }
             </div>
-            </div>
-        }
+        </div>
+            </section>
     </div>
 </div>
     </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

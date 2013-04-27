@@ -1,42 +1,56 @@
 ﻿@model MyTour.Models.LoginModel
+@{
+    Layout = "/Views/Shared/_myTourContentLayout.cshtml";
+    ViewBag.Title = "Login";
+}
+<head>
+    <link href="/css/modern.css" rel="stylesheet">
+    <link href="/css/theme-dark.css" rel="stylesheet">
+    <link href="/css/modern-responsive.css" rel="stylesheet">
+</head>
 
 <div id="slidingSection">
 <div id="wrapper">
     <div class="content">
         <section>
             <h2>Please Login.</h2>
-            @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) 
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(true)
+            
+            <div class="user-login">
+            <div id="login-form"> 
+                @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) 
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
 
-                <div class="login-left">
-                    <div id="login-form">
-                        <ol>
-                            <li>
-                                @Html.LabelFor(m => m.UserName)
-                                @Html.EditorFor(m => m.UserName)
-                                @Html.ValidationMessageFor(m => m.UserName)
-                            </li>
-                            <li>
-                                @Html.LabelFor(m => m.Password)
-                                @Html.EditorFor(m => m.Password)
-                                @Html.ValidationMessageFor(m => m.Password)
-                            </li>
-                            <li>
-                                @Html.CheckBoxFor(m => m.RememberMe)
-                                @Html.LabelFor(m => m.RememberMe)
-                            </li>
-                        </ol>
-                        <input id="submit-button" class="button gray stripe"  type="submit" value="Login" />
-
+                    <div class="labels">
                         <p>
-                            @Html.ActionLink("Register", "Register") if you don't have an account.
+                            @Html.LabelFor(p => p.UserName)
+                            <br/>
+                            @Html.EditorFor(p => p.UserName)
+                            @Html.ValidationMessageFor(p => p.UserName)
                         </p>
-                    </div>
-                </div>
-            }
+                        <p>
+                            @Html.LabelFor(p => p.Password)
+                            <br/>
+                            @Html.EditorFor(p => p.Password)
+                            @Html.ValidationMessageFor(p => p.Password)
+                        </p>
+                        
+                        <input id="submit-button" class="button gray stripe"  type="submit" value="Login" />
+                        <br />
+                        <br>
+                        @Html.ActionLink("Register", "Register") if you don't have an account.
+                    </div>    
+                
+                 
+                }
+            </div>
+           </div>
         </section>
     </div>
+    
+    <div class="clearfix"></div>
+
+    <div class="push"></div>
 </div>
 </div>
