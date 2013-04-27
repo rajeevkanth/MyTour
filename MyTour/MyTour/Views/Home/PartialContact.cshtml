@@ -8,12 +8,22 @@
     <title>Contact  myTours</title>
     <link href="/Style/css/style.css" rel="stylesheet">
     <link href="/Style/css/Contact/style.css" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/style/type/puritan.css" />
+
 </head>
-<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+<script type="text/javascript" src="~/Scripts/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="~/Scripts/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="~/Scripts/scripts.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery.infieldlabel.min.js"></script>
+<script src="@Url.Content("~/scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
 
 <script type="text/javascript">
 
-    $(function () { $("label").inFieldLabels(); });
+    $(function ()
+    {
+        var infield = $("label").inFieldLabels();
+        alert(infield);
+    });
 </script>
 <script type="text/javascript">
 
@@ -83,7 +93,7 @@
                                     }))
           {
               @Html.ValidationSummary(true)
-              <div class="labels">
+              <div class="label">
                   <p>
                     @Html.LabelFor(p => p.Name)
                       <br/>
