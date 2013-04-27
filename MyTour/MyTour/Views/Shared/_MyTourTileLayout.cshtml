@@ -10,6 +10,7 @@
    <link href="/css/modern.css" rel="stylesheet">
     <link href="/css/theme-dark.css" rel="stylesheet">
     <link href="/css/modern-responsive.css" rel="stylesheet">
+
 </head>
     <script src="/js/assets/jquery-1.8.2.min.js"></script>
     <script src="/js/assets/google-analytics.js"></script>
@@ -18,7 +19,6 @@
     <script src="/js/modern/tile-slider.js"></script>
     <script src="/js/modern/start-menu.js"></script>
     <script src="/js/modern/tile-drag.js"></script>
-
 <body>
     <div id="container"> 
   <!-- Begin Header Wrapper -->
@@ -26,29 +26,6 @@
     <div id="header-wrapper"> 
       <!-- Begin Header -->
       <div id="header">
-@*        <div id="logo">
-            <a href="/Index/Home">
-            <img src="~/style/images/Art/Tour.png" alt="MyTour"/>
-           </a></div>*@
-        @*<!-- Logo -->*@ 
-        <!-- Begin Menu -->
-@*      <div id="menu-wrapper">
-        <div id="smoothmenu1" class="ddsmoothmenu">
-          <ul>
-            <li id="Home">@Html.ActionLink("Home", "Index", "Home")</li>
-            <li id="Admin">@Html.ActionLink("Admin", "Index", "Admin")</li>
-            <li id="About">@Html.ActionLink("About us", "About", "Home")</li>
-            <li id="Place">@Html.ActionLink("Places", "Place", "Place")</li>
-            <li id="Bookings">@Html.ActionLink("Bookings", "Booking", "Index")</li>
-              <li id="Contact">@Html.ActionLink("Contact", "Contact", "Home")</li>
-              @if (Request.IsAuthenticated)
-              {
-                  <li>@Html.ActionLink("LogOff", "LogOff", "Account")</li>
-              }
-
-          </ul>
-        </div>
-      </div>*@
       <!-- End Menu --> 
       </div>
       <!-- End Header --> 
@@ -57,12 +34,9 @@
   <!-- End Header Wrapper --> 
   
   <!-- Body -->
-  <div id="slidingSection">
-  @RenderBody()
-  </div>
-  
 </div>
-  @RenderSection("scripts", required: false) 
+    @RenderSection("scripts", required: false) 
+    @RenderBody()
 </body>
  
 
