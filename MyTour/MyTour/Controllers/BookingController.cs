@@ -13,10 +13,11 @@ namespace MyTour.Controllers
 
         public ActionResult Index()
         {
-            if (Request.IsAjaxRequest())
-                return PartialView("PartialBooking");
+            //if (Request.IsAjaxRequest())
+            //    return PartialView("PartialBooking");
 
-            return View();
+            //return View();
+            return PartialView("PartialBooking");
         }
 
     }

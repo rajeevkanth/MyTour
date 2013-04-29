@@ -605,6 +605,7 @@
     <Content Include="Style\Images\header-bg5.png" />
     <Content Include="Style\Images\header-bg6.png" />
     <Content Include="Style\Images\header-bg7.png" />
+    <Content Include="Style\Images\home.jpg" />
     <Content Include="Style\Images\icon-art.png" />
     <Content Include="Style\Images\icon-big1.png" />
     <Content Include="Style\Images\icon-big2.png" />

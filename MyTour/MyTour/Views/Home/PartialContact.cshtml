@@ -4,71 +4,16 @@
     Layout = "/Views/Shared/_myTourContentLayout.cshtml";
     ViewBag.Title = "Contact";
 }
-<head>
-    <title>Contact  myTours</title>
-    <link href="/Style/css/style.css" rel="stylesheet">
-    <link href="/Style/css/Contact/style.css" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="/style/type/puritan.css" />
 
-</head>
-<script type="text/javascript" src="~/Scripts/jquery-1.5.min.js"></script>
-<script type="text/javascript" src="~/Scripts/ddsmoothmenu.js"></script>
-<script type="text/javascript" src="~/Scripts/scripts.js"></script>
-<script type="text/javascript" src="~/Scripts/jquery.infieldlabel.min.js"></script>
-<script src="@Url.Content("~/scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
-
-<script type="text/javascript">
-
-    $(function ()
-    {
-        var infield = $("label").inFieldLabels();
-        alert(infield);
-    });
-</script>
-<script type="text/javascript">
-
-    $(document).ready(function () {
-        var comment = $('#Message');
-        comment.addClass('textbox');
-        comment.height = 150;
-        
-        function DataSaved(data)
+@*<script type="text/javascript">
+        $(function()
         {
-
-            var result = data.get_response().get_object();
-
-            $('#slidingSection').fadeOut("slow", function() {
-                $('#slidingSection').replaceWith(result);
-                $('#slidingSection').hide();
-                $('#slidingSection').fadeIn(1500);
-            });
-        }
-    //    $('#submit-button').click(function (event)
-    //    {
-    //        event.preventDefault();
-    //        var f= $(this).closest('form').data('elem', $(this));
+            $("label").inFieldLabels();
             
-
-    //var options = {
-    //            url: "/Home/Contact",
-    //            type:"POST"
-                
-    //        };
-    //        $.ajax(options).done(function (data) {
-    //            $('#slidingSection').fadeOut("slow", function ()
-    //            {
-    //                $('#slidingSection').replaceWith(data);
-    //                $('#slidingSection').hide();
-    //                $('#slidingSection').fadeIn(1500);
-    //            })
-    //        })
-    //    })
-    });
-
-
-</script>
+        });
+</script>*@
   
-  <!-- Begin Wrapper -->
+<!-- Begin Wrapper -->
 <div id="slidingSection">
   <div id="wrapper"> 
     
@@ -93,7 +38,7 @@
                                     }))
           {
               @Html.ValidationSummary(true)
-              <div class="label">
+              <div class="labels">
                   <p>
                     @Html.LabelFor(p => p.Name)
                       <br/>

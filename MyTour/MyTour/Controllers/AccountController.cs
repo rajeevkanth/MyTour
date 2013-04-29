@@ -35,7 +35,7 @@ namespace MyTour.Controllers
         {
             if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
             {
-                return RedirectToLocal(returnUrl);
+                return RedirectToLocal("Home/Index");
             }
 
             // If we got this far, something failed, redisplay form
@@ -50,8 +50,8 @@ namespace MyTour.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-
-            return RedirectToAction("Index", "Home");
+            return RedirectToLocal("Home/Index");
+            //return RedirectToAction("Index", "Home");
         }
 
         //
