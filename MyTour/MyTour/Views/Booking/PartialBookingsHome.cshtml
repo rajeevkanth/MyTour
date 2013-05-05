@@ -1,0 +1,137 @@
+﻿@{
+    Layout = "/Views/Shared/_myTourContentLayout.cshtml";
+    ViewBag.Title = "Booking";
+} 
+<head>
+ <link href="/css/modern.css" rel="stylesheet">
+ <link href="/css/theme-dark.css" rel="stylesheet">
+ <link href="/css/modern-responsive.css" rel="stylesheet">
+</head>
+<script src="/Scripts/jquery-1.9.1.js"></script>
+    <script src="/js/assets/google-analytics.js"></script>
+    <script src="/js/assets/jquery.mousewheel.min.js"></script>
+    <script src="/js/assets/github.info.js"></script>
+    <script src="/js/modern/tile-slider.js"></script>
+    <script src="/js/modern/start-menu.js"></script>
+<script src="/js/modern/tile-drag.js"></script>
+
+<script type="text/javascript">
+        $(function()
+        {
+            $('#Brisbane').mousedown(function ()
+            {
+                window.location.href = "@Url.Action("Booking","Booking","Brisbane")";
+            });
+        });
+</script>
+
+<div id="slidingSection" style="padding: 0px">
+
+    <div class="metrouicss">
+        <div class="page secondary fixed-header">
+
+            <div class="page-region" style="padding: 75px">
+                <div class="page-region-content tiles">
+                
+                    <div class="tile-group tile-drag" id="Brisbane">
+                    
+                        <div class="tile double-vertical  bg-color-green">
+                            <div class="tile-content">
+                                <h2>Brisbane day trip.</h2>
+                                <br>
+                                <p>1) Kangaroo Point</p>
+                                <p>2) Mount Coot-tha</p>     
+                                <p>3) Roma street parklands</p>
+                                <p>4) Lone pine kola sanctuary</p>                        
+                            </div>
+
+                            <div class="brand">
+                                <div class="badge"></div>
+                                <span class="name">Brisbane city, Qld.</span>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    <div class="tile-group tile-drag">
+                        <div class="tile double-vertical bg-color-blue">
+                            <div class="tile-content">
+                                <h2>Sunshine coast day trip.</h2>
+                                <br>
+                                <p>1) Kangaroo Point</p>
+                                <p>2) Mount Coot-tha</p>     
+                                <p>3) Roma street parklands</p>
+                                <p>4) Lone pine kola sanctuary</p>                        
+                            </div>
+
+                            <div class="brand">
+                                <div class="badge"></div>
+                                <span class="name">Sunsinhe coast,Qld.</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                    <div class="tile-group tile-drag">
+                        <div class="tile double-vertical bg-color-orangeDark">
+                            <div class="tile-content">
+                                <h2>Mount Tambourine </h2>
+                                <br>
+                                <p>1) Kangaroo Point</p>
+                                <p>2) Mount Coot-tha</p>     
+                                <p>3) Roma street parklands</p>
+                                <p>4) Lone pine kola sanctuary</p>                        
+                            </div>
+
+                            <div class="brand">
+                                <div class="badge"></div>
+                                <span class="name">Mt Tambourine, Qld.</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tile-group tile-drag">
+                        <div class="tile double-vertical bg-color-red">
+                            <div class="tile-content">
+                                <h2>Gold Coast</h2>
+                                <br>
+                                <p>1) Kangaroo Point</p>
+                                <p>2) Mount Coot-tha</p>     
+                                <p>3) Roma street parklands</p>
+                                <p>4) Lone pine kola sanctuary</p>                        
+                            </div>
+
+                            <div class="brand">
+                                <div class="badge"></div>
+                                <span class="name">Gold Coast, Qld.</span>
+                            </div>
+                        </div>
+
+                    </div>                
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <div id="header">
+        <hgroup class="title">
+    <h1>Standard inclusions.</h1>
+    </hgroup>
+
+        <article>
+            <p>Talk about things common across all packages</p>
+            <ol>
+                <li>1. Vasu will bethe chaffeur initially.</li>
+                <br/>
+                <li>2. By making a booking, you agree to our terams and consitions.</li> 
+
+            </ol>
+        </article>
+    </div>
+    
+</div>
+
+    
+   

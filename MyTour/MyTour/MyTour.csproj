@@ -179,6 +179,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BookingViewModel.cs" />
     <Compile Include="ViewModels\ContactViewModel.cs" />
     <Compile Include="ViewModels\PlaceViewModel.cs" />
   </ItemGroup>
@@ -422,6 +423,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.cycle.all.js" />
     <Content Include="Scripts\jquery.cycle.all.min.js" />
     <Content Include="Scripts\jquery.infieldlabel.min.js" />
@@ -678,13 +680,14 @@
     <Content Include="Views\Home\PartialContact.cshtml" />
     <Content Include="Views\Home\PartialAbout.cshtml" />
     <Content Include="Views\Place\PartialPlace.cshtml" />
-    <Content Include="Views\Booking\Booking.cshtml" />
-    <Content Include="Views\Booking\PartialBooking.cshtml" />
+    <Content Include="Views\Booking\BookingsHome.cshtml" />
+    <Content Include="Views\Booking\PartialBookingsHome.cshtml" />
     <Content Include="Views\Home\PartialRegistrationConfirmation.cshtml" />
     <Content Include="Views\Admin\Admin.cshtml" />
     <Content Include="Views\Admin\PartialAdmin.cshtml" />
     <Content Include="Views\Account\PartialLogin.cshtml" />
     <Content Include="Views\User\User.cshtml" />
+    <Content Include="Views\Booking\BookingPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

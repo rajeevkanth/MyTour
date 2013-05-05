@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using MyTour.ViewModels;
 
 namespace MyTour.Controllers
 {
@@ -17,7 +14,25 @@ namespace MyTour.Controllers
             //    return PartialView("PartialBooking");
 
             //return View();
-            return PartialView("PartialBooking");
+            return PartialView("PartialBookingsHome");
+        }
+
+        [HttpGet]
+        public ActionResult Booking(string place)
+        {
+        
+            return View("BookingPage");
+        }
+
+        [HttpPost]
+        public ActionResult Booking(BookingViewModel viewmodel)
+        {
+            if (ModelState.IsValid)
+            {
+                return Redirect("Home/Index");
+            }
+
+            return View("BookingPage");
         }
 
     }

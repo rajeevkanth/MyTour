@@ -1,0 +1,47 @@
+﻿@model MyTour.ViewModels.BookingViewModel
+@{
+    Layout = "/Views/Shared/_myTourContentLayout.cshtml";
+    ViewBag.Title = "BookingPage";
+}
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+
+
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
+
+<div id="slidingSection">
+<div id="wrapper"> 
+    
+    <!-- Begin Content -->
+    <div class="content">
+        <div class="user-login">
+            <div id="login-form"> 
+                <h3>Please check availability</h3>
+                <br/>
+                @using (Html.BeginForm())
+                {
+                   @Html.ValidationSummary(true)
+                    <div>
+                        <p>Date: @Html.TextBoxFor(p=>p.BookingDate,new {id="datepicker"})</p>
+                         @Html.ValidationMessageFor(p => p.BookingDate)
+                        <br>
+                        <p>Adults: <input type="text" /></p>
+                        <br>
+                        <p>Children: <input type="text" /></p>
+                        <br>
+                        <input id="submit-button" class="button gray stripe"  type="submit" value="Check availability" />
+                        
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
